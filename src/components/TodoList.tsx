@@ -38,7 +38,7 @@ const TodoList = () => {
       alignItems='stretch'
     >
       {todos.map(todo => (
-        <HStack key={todo.id} >
+        <HStack key={todo.id} draggable='true'>
           <Text>{todo.body}</Text>
           <Spacer />
           <IconButton
