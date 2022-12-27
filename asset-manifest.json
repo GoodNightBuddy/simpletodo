@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/simpletodo/static/js/main.2dfa9bf8.js",
+    "static/js/787.28cb0dcd.chunk.js": "/simpletodo/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/simpletodo/index.html",
+    "main.2dfa9bf8.js.map": "/simpletodo/static/js/main.2dfa9bf8.js.map",
+    "787.28cb0dcd.chunk.js.map": "/simpletodo/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.2dfa9bf8.js"
+  ]
+}
