@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <ChakraProvider>
       <Provider>
-      <ColorModeScript />
+        <ColorModeScript />
         <App />
       </Provider>
     </ChakraProvider>

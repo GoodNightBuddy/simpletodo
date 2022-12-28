@@ -1,17 +1,10 @@
-import { Badge, HStack, IconButton, Spacer, StackDivider, Text, VStack } from '@chakra-ui/react';
-import { useContext } from 'react';
-import { FaTrash } from 'react-icons/fa';
-import { removeTodo } from '../context/actions';
+import { Badge,StackDivider, VStack } from '@chakra-ui/react';
+import { useContext} from 'react';
 import { TodoContext } from '../context/context';
+import TodoComponent from './TodoComponent';
 
 const TodoList = () => {
-
-  const [todos, dispatch] = useContext(TodoContext);
-
-  const removeHandler =  (id: string): void => {
-    if(!dispatch) return;
-    dispatch(removeTodo(id))
-  }
+  const [todos] = useContext(TodoContext);
 
   if (!todos || !todos.length) {
     return (
@@ -37,18 +30,7 @@ const TodoList = () => {
       maxW={{ base: '90vw', sm: '80vw', lg: '50vw', xl: '40wv' }}
       alignItems='stretch'
     >
-      {todos.map(todo => (
-        <HStack key={todo.id} draggable='true'>
-          <Text>{todo.body}</Text>
-          <Spacer />
-          <IconButton
-            icon={<FaTrash />}
-            aria-label={''}
-            isRound
-            onClick={() => removeHandler(todo.id)}
-          />
-        </HStack>
-      ))}
+      {todos.map(todo => <TodoComponent todo={todo} key={todo.id}/> )}
     </VStack>
   );
 };
